@@ -4,7 +4,7 @@
     private $host = DB_HOST;
     private $user = DB_USER;
     private $password = DB_PASSWORD;
-    private $db_name = DB_NAME;
+    private $dbname = DB_NAME;
     private $dbh;
     private $error;
     private $stmt;
@@ -12,7 +12,7 @@
     
     public function __construct(){
        // Set the DSN
-       $dsn = 'mysql:host=' . $this->host .';$db_name' .$this->db_name;
+       $dsn = 'mysql:host=' . $this->host .';dbname=' .$this->dbname;
        
        // Set Options
        $options = array(
@@ -65,7 +65,7 @@
     
     public function single()  {
         $this->execute();
-        return $this->stmt->fetchAll(PDO::FETCH_OBJ);
+        return $this->stmt->fetch(PDO::FETCH_OBJ);
     }
 }
 ?>
