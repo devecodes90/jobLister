@@ -19,6 +19,5 @@
     <a style="text-decoration: none;" class="p-2 text-dark" href="#">Support</a>
     <a style="text-decoration: none;" class="p-2 text-dark" href="#">Pricing</a>
   </nav>
- 
 </div>
-
+    <?php displayMessage(); ?>
